@@ -1,0 +1,100 @@
+/* Everything from before stays — additions below */
+/* Reset-ish */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Background + Layout */
+body {
+  background: radial-gradient(circle at top, #0b1e2d, #000);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 2s ease;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation: fadeIn 3s ease;
+}
+
+/* Button */
+button {
+  padding: 1rem 2rem;
+  background: #00bcd4;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: #26c6da;
+  transform: scale(1.05);
+}
+
+/* Duck animation area */
+.duck-container {
+  margin-top: 2rem;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.duck {
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  animation: fly 4s linear infinite;
+}
+
+@keyframes fly {
+  0% { left: -70px; transform: rotate(0deg); }
+  50% { transform: rotate(360deg); }
+  100% { left: 100vw; transform: rotate(720deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.dark-mode {
+  background: linear-gradient(to bottom, #111, #000);
+  color: #ddd;
+}
+
+.dark-mode button {
+  background: #444;
+  color: white;
+}
+
+.dark-mode button:hover {
+  background: #666;
+}
