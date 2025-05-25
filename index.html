@@ -13,13 +13,20 @@
   </header>
 
   <main>
-    <button id="launchDuck">Launch a Duck!</button>
+    <div class="controls">
+      <button id="launchDuck">Launch a Duck!</button>
+      <button id="toggleTheme">🌙 Toggle Dark Mode</button>
+    </div>
+    <p>Ducks Launched: <span id="duckCount">0</span></p>
     <div class="duck-container" id="duckContainer"></div>
   </main>
 
   <footer>
     <p>&copy; 2025 Duckonautics Inc.</p>
   </footer>
+
+  <!-- Sound effect -->
+  <audio id="quackSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
 
   <script src="script.js"></script>
 </body>
